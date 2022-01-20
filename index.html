@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First HTML PAGE</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <section class="hero-section">
+      <div class="hero-section__image">
+        <img
+          src="https://www.itl.cat/pngfile/big/199-1997083_fontana-milano-1915s-a-bag-collaboration-with-wallpaper.jpg"
+          class="desktop"
+          alt=""
+        />
+        <img
+          class="mobile"
+          src="https://i.pinimg.com/474x/46/4c/54/464c5488d313e2d4986743ac6323ac0e.jpg"
+        />
+      </div>
+      <div class="hero-section__content">
+        <div class="hero-section__container">
+          <div class="hero-section__content--header">
+            <a href="">
+              <span>SOKRO</span>
+            </a>
+            <a href="">
+              <img
+                src="https://img.icons8.com/ios-glyphs/344/ffffff/shopping-cart--v1.png"
+              />
+            </a>
+          </div>
+          <div class="hero-section__content--text">
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <a href="">SHOP NOW</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-galory">
+      <div class="section-galory__img">
+        <img
+          src="https://www.cdiscount.com/pdt2/5/6/6/1/1200x1200/eco2008958551566/rw/sacoche-homme-en-bandouliere-serviette-homme-sac-c.jpg"
+          alt=""
+        />
+      </div>
+      <div class="section-galory__text">
+        <div class="section-galory__text--container">
+          <h2>SAC À MAIN BANDOULIÈRE FEMME</h2>
+          <div>
+            <p>
+              The all new Speed model is designed with the active life in mind.
+              Speed moves smoothly thanks to an all-wheel suspension, air-filled
+              tires, and folds with ease due to a new ergonomic trigger release.
+            </p>
+          </div>
+          <a href=""> VIEW MODEL</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-video">
+      <video id="video" width="100%" c>
+        <source
+          src="https://static.videezy.com/system/resources/previews/000/034/750/original/CH071.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support HTML5 video.
+      </video>
+      <button class="VideoPlay" onclick="playPause(event)">
+        <img
+          class="play-icon"
+          src="https://img.icons8.com/ios-filled/344/ffffff/circled-play.png"
+          alt=""
+        />
+      </button>
+    </section>
+    <section class="section-newsletter">
+      <div class="section-gnewsletter__img">
+        <img
+          src="https://www.oakwoodbeauty.co.uk/images/katie_loxton_beach.jpg"
+          alt=""
+        />
+      </div>
+      <div class="newsletter-content">
+        <form action="">
+          <div class="newsletter-container">
+            <h2>Subscribe to our Newsletter</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam
+              nunc justo sagittis suscipit ultrices. Sample text. Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit nullam nunc justo
+              sagittis suscipit ultrices.
+            </p>
+            <div class="input-sumbit">
+              <input
+                class="newsletter-input"
+                type="text"
+                placeholder="Enter a valid email address"
+                name="mail"
+                required
+              />
+              <input
+                class="newsletter-submit"
+                type="submit"
+                value="SUBSCRIBE"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <footer>
+        <div class="section-footer">
+          <div class="section-footer__social-media">
+            <a href="#" class="facebook">
+              <img
+                src="https://e7.pngegg.com/pngimages/752/373/png-clipart-computer-icons-facebook-logo-facebook-logo-fine.png"
+                alt=""
+            /></a>
+            <a href="#" class="twitter">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1384/1384033.png"
+                alt=""
+            /></a>
+            <a href="#" class="pinterest">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1051/1051329.png"
+                alt=""
+            /></a>
+            <a href="#" class="linkedin">
+              <img
+                src="https://findicons.com/files/icons/2779/simple_icons/512/linkedin_512_black.png"
+                alt=""
+            /></a>
+            <a href="#" class="youtube">
+              <img
+                src="https://cdn.icon-icons.com/icons2/509/PNG/512/YouTube_icon-icons.com_49934.png"
+                alt=""
+            /></a>
+          </div>
+          <div class="section-footer__legal">
+            <a href="">Terms of Service </a>
+            <a href="">Privacy Policy </a>
+            <a class="language" href=""
+              >English
+              <img
+                src="https://img.icons8.com/ios-glyphs/344/ffffff/sort-down.png"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
+  <script>
+    var myVideo = document.getElementById("video");
+
+    function playPause(event) {
+      var button = event.currentTarget;
+      var buttonImage = button.getElementsByClassName("play-icon")[0];
+
+      buttonImage.classList.add("fadeOut");
+
+      setTimeout(function () {
+        buttonImage.classList.add("hide");
+      }, 1000);
+
+      if (!myVideo) return;
+      if (myVideo.paused) myVideo.play();
+      else myVideo.pause();
+      myVideo.setAttribute("controls", "");
+    }
+  </script>
+</html>
